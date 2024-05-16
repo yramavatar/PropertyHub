@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "AxQ67G0cbNumjJbbtf9I2vvrEW5FrXcnUdbr7fJeM4k=",
+  "Source": "PropertyHubWebApi",
+  "BasePath": "_content/PropertyHubWebApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

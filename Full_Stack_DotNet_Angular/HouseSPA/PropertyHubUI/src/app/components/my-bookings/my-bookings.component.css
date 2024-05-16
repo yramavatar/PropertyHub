@@ -1,0 +1,154 @@
+/* Styling for each booking item */
+
+.card_body_container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.property_booking_main{
+  padding: 10px;
+}
+.booking-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+   
+ 
+  /* Button style */
+  .cancel-button {
+    background-color: #f44336;
+    color: white;
+    padding: 8px 16px;
+    font-size: 16px;
+    border-radius: 4px;
+  }
+   
+  /* Style for the new booking form */
+  .new-booking-form {
+    margin-top: 20px;
+  }
+   
+  /* Style for the headings */
+  h2 {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  .booking_image{
+    height: 250px;
+    width: 100%;
+  }
+  .info_header{
+    display: flex;
+    /* justify-content: space-around; */
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: rgba(119, 119, 9, 0.594);
+  }
+  .booking_image img{
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+
+  .button_seg{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .booking_image img:hover{
+    transform: scale(1.05);
+    transition: 0.5s ease;
+
+  }
+  /* Style for the book button */
+  .book-button {
+    background-color: #4caf50;
+    color: white;
+    padding: 8px 16px;
+    font-size: 16px;
+    border-radius: 4px;
+    margin-top: 10px;
+  }
+  .property_booking_main{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    border: 1px solid black;
+    border-radius: 10px;
+
+  }
+  .button-2 {
+    width: 50px;
+    background: #e62143;
+    border-radius: 999px;
+    margin-bottom: 12px;
+    box-shadow: #e56666 0 10px 20px -10px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    opacity: 1;
+    outline: 0 solid transparent;
+    padding: 8px 18px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 250px;
+    word-break: break-word;
+    border: 0;
+    margin-left: 12px;
+  }
+
+  .button-1 {
+    width: 50px;
+    background: #c8b312e5;
+    border-radius: 999px;
+    margin-left: 5px;
+    margin-bottom: 12px;
+    box-shadow: #e56666 0 10px 20px -10px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    opacity: 1;
+    outline: 0 solid transparent;
+    padding: 8px 18px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 250px;
+    word-break: break-word;
+    border: 0;
+    margin-left: 18px;
+  }
+  .booking_body{
+    margin-bottom: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 5px;
+    gap: 5px;
+  }
+  .style_text{
+    color: rgb(3, 3, 45,0.4);
+  }
+
+  .card-header{
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-top: 5px;
+    color: orangered;
+  }
+  

@@ -1,0 +1,11 @@
+.navbar-brand img{
+    margin-right: 12px;
+    margin-left: 12px;
+
+}
+#navbar_id{
+    height: 65px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(59, 58, 58, 0.23) 0px 6px 6px;
+     margin-bottom: 15px;
+     
+}

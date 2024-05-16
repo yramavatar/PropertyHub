@@ -1,0 +1,71 @@
+<div class="container mt-3">
+<h2 >Fill Property Details</h2>
+    <!-- Add Property Form -->
+    <div class="card mb-3">
+        <div class="card-header">Add New Property</div>
+        <div class="card-body">
+            <form (submit)="onAddPropertySubmit()">
+                <div class="mb-3">
+                    <label for="propertyType">Property type</label>
+                    <select class="form-select" id="propertyType" [(ngModel)]="newProperty.propertyType" name="propertyType" required>
+                        <option value=0>Apartment</option>
+                        <option value=1>Commercial</option>
+                        <option value=2>Villa</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="flatType">Flat Type</label>
+                    <select class="form-select" id="flatType" [(ngModel)]="newProperty.flatType" name="flatType"
+                        required>
+                        <option value=0>1 BHK</option>
+                        <option value=1>2 BHK</option>
+                        <option value=2>3 BHK</option>
+                        <option value=3>4 BHK</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="sizeSqFt">Size (sq ft)</label>
+                    <input type="number" class="form-control" id="sizeSqFt" [(ngModel)]="newProperty.sizeSqFt"
+                        name="sizeSqFt" required>
+                </div>
+                <div class="mb-3">
+                    <label for="description">Description</label>
+                    <textarea class="form-control" id="description" [(ngModel)]="newProperty.description"
+                        name="description" required></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="price">Price</label>
+                    <input type="number" class="form-control" id="price" [(ngModel)]="newProperty.price" name="price"
+                        required>
+                </div>
+                <div class="mb-3">
+                    <label for="location">Location</label>
+                    <input type="text" class="form-control" id="location" [(ngModel)]="newProperty.location"
+                        name="location" required>
+                </div>
+                <div class="mb-3">
+                    <label for="city">City</label>
+                    <input type="text" class="form-control" id="city" [(ngModel)]="newProperty.city" name="city"
+                        required>
+                </div>
+                <div class="mb-3">
+                    <label for="propertyStatus">Property Status</label>
+                    <select class="form-select" id="propertyStatus" [(ngModel)]="newProperty.propertyStatus" name="propertyStatus" required>
+                        <option value=0>Available</option>
+                        <option value=1>Rented</option>
+                        <option value=2>Sold</option>
+                        <option value=3>Booked</option>
+  
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="imageUrl">Image Url</label>
+                    <input type="text" class="form-control" id="imageUrl" [(ngModel)]="newProperty.imageUrl" name="imageUrl"
+                        required>
+                </div>
+                <button type="submit" class="btn btn-primary">Save Property Details</button>
+                
+            </form>
+        </div>
+    </div>
+</div>

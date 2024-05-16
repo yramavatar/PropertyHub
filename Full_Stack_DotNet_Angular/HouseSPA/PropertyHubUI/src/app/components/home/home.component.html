@@ -1,0 +1,76 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+
+@if(userType===0){
+<div class="home-container">
+    <div class="background-image"></div>
+    <div class="overlay"></div>
+    <div class="content">
+        <h1>Welcome to PropertyHub</h1>
+        <p>
+            PropertyHub is your ultimate destination for finding your dream property. Whether you're looking for a cozy
+            apartment in the heart of the City or a luxurious villa overlooking the countryside, we've got you covered.
+            Browse through our extensive listings, book viewings, and make your dream of owning or renting the perfect
+            property a reality with PropertyHub.
+        </p>
+        <hr class="my-4">
+        <p>Start exploring our listings today!</p>
+        <a class="btn btn-primary btn-lg" routerLink="/property-listings" role="button">Explore Listings</a>
+
+    </div>
+</div>
+}
+
+@if(userType===1){
+<div class="container">
+
+    <!-- List of Properties -->
+    <div class="card">
+        <div class=""></div>
+        <div class="card-header">My Properties</div>
+        <div class="card-body">
+            <div *ngFor="let property of properties" class="property_add">
+
+                <div class="property_image">
+                    <img src="{{property.imageUrl}}" width="40%" height="30%" alt="image">
+                </div>
+
+                <div class="property_wrapper">
+                    <div class="card-title"><span class="style_text1">Property Type</span>: {{
+                        property.propertyType===0?"Apartment":(property.propertyType===1?"Commercial":"Villa") }}
+                    </div>
+                    <div class="property_details">
+                        <div>
+
+                            <p class="card-text"><span class="style_text">Flat Type:</span> {{ property.flatType===0?"1 BHK":(property.flatType===1?"2
+                                BHK":(property.flatType===2?"3 BHK":"4 BHK")) }}</p>
+                            <p class="card-text"><span class="style_text">Size:</span> {{ property.sizeSqFt }} sq ft</p>
+                            <p class="card-text"><span class="style_text">Location:</span> {{ property.location }}</p>
+                        </div>
+                        <div>
+                            <p class="card-text"><span class="style_text">Price:</span> ${{ property.price }}</p>
+                            <p class="card-text"><span class="style_text">City:</span> {{ property.city }}</p>
+                            <p class="card-text"><span class="style_text">Status:</span> {{
+                                property.propertyStatus===0?"Available":(property.propertyStatus===1?"Rented":(property.propertyStatus===2?"Sold":"Booked"))
+                                }}</p>
+                        </div>
+
+                    </div>
+                    <p class="desc_property"><span class="style_text">Description:</span> {{ property.description }}</p>
+
+                    <div class="button_propery">
+                        <button class="button-1" (click)="editProperty(property)">Edit</button>
+                        <button class="button-2" (click)="deleteProperty(property.propertyId)">Delete</button>
+                    </div>
+                </div>
+
+            </div> 
+
+        </div>
+
+        
+    </div>
+</div>
+}
+

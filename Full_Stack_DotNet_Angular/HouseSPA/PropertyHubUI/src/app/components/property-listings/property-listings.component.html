@@ -1,0 +1,57 @@
+<div class="container">
+    <!-- List of Properties -->
+    <div class="card">
+        <div class="">
+            <div class="card-header">Explore the Properties</div>
+            <!-- Search by City -->
+            <div class="search_options">
+                <div class="label_search">Search by City</div>
+                <select id="cityDropdown" [(ngModel)]="selectedCity">
+                    <option value="">Select City</option>
+                    <option *ngFor="let city of cities" [value]="city">{{ city }}</option>
+                </select>
+                <button class="btn btn-primary mt-2" (click)="searchByCity()">Search</button>
+            </div>
+        </div>
+        <div class="card-body">
+            <div *ngFor="let property of filteredProperties" class="property_add">
+
+                <div class="property_image">
+                    <img src="{{property.imageUrl}}" width="40%" height="30%" alt="image">
+                </div>
+
+                <div class="property_wrapper">
+                    <div class="card-title"><span class="style_text1">Property Type</span>: {{
+                        property.propertyType===0?"Apartment":(property.propertyType===1?"Commercial":"Villa") }}
+                    </div>
+                    <div class="property_details">
+                        <div>
+
+                            <p class="card-text"><span class="style_text">Flat Type:</span> {{ property.flatType===0?"1
+                                BHK":(property.flatType===1?"2
+                                BHK":(property.flatType===2?"3 BHK":"4 BHK")) }}</p>
+                            <p class="card-text"><span class="style_text">Size:</span> {{ property.sizeSqFt }} sq ft</p>
+                            <p class="card-text"><span class="style_text">Location:</span> {{ property.location }}</p>
+                        </div>
+                        <div>
+                            <p class="card-text"><span class="style_text">Price:</span> ${{ property.price }}</p>
+                            <p class="card-text"><span class="style_text">City:</span> {{ property.city }}</p>
+                            <p class="card-text"><span class="style_text">Status:</span> {{
+                                property.propertyStatus===0?"Available":(property.propertyStatus===1?"Rented":(property.propertyStatus===2?"Sold":"Booked"))
+                                }}</p>
+                        </div>
+
+                    </div>
+                    <p class="desc_property"><span class="style_text">Description:</span> {{ property.description }}</p>
+
+                    <div class="button_propery">
+                        <button class="btn btn-success" (click)="bookProperty(property)" [disabled]="property.propertyStatus !==0">Book Now</button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+   
+
+    </div>

@@ -1,0 +1,158 @@
+.home-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+   
+  .background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://incomeholic.com/wp-content/uploads/2021/02/The-Lazy-Way-to-Invest-in-Real-Estate.jpg'); /* Replace with the path to your background image */
+    background-size: cover;
+    background-position: center;
+    filter: blur(5px); /* Optional: Add a blur effect to the background image */
+    z-index: -1;
+  }
+  .card-header {
+    margin-left: 500px;
+    color: #4a7e07;
+    font-size: 1.8rem;
+    font-weight: 700;
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Optional: Add a semi-transparent overlay for better readability */
+    z-index: -1;
+  }
+   
+  .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    z-index: 1;
+  }
+  .card-body{
+    border: 1px solid black;
+  }
+  .property_add{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border-bottom: 1px solid red;
+    margin-top: 10px;
+  }
+
+  .property_add img{
+    width: 400px;
+    height: 230px;
+    background-size: cover;
+    margin-top: 10px;
+  }
+  .property_add img:hover{
+   transform: scale(1.05);
+   transition: 0.5s ease;
+   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  }
+  .property_wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    gap: 10px;
+    width: 90%;
+  }
+  .property_details{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    /* gap: 150px; */
+    font-family: "Oswald", sans-serif;
+    font-size: 1.1rem;
+
+  }
+  .card-title{
+    margin-top: 5px;
+    margin-bottom: 20px;
+    margin-left: 190px;
+    font-size: 1.6rem;
+    font-weight: 600;
+    font-family: "Oswald", sans-serif;
+  }
+  .button_propery{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding-bottom: 10px;
+  }
+
+.button-1 {
+  width: 100px;
+  background: #5E5DF0;
+  border-radius: 999px;
+  box-shadow: #5E5DF0 0 10px 20px -10px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  opacity: 1;
+  outline: 0 solid transparent;
+  padding: 8px 18px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 100px;
+  word-break: break-word;
+  border: 0;
+  
+}
+.button-2 {
+  width: 100px;
+  background: #e62143;
+  border-radius: 999px;
+  box-shadow: #e56666 0 10px 20px -10px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  opacity: 1;
+  outline: 0 solid transparent;
+  padding: 8px 18px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 100px;
+  word-break: break-word;
+  border: 0;
+  
+}
+.style_text{
+  color: rgb(3, 3, 45,0.4);
+}
+.style_text1{
+  color: rgba(66, 8, 8, 0.4);
+}
+.desc_property{
+  font-weight: 400;
+  font-size: 0.8rem;
+  font-family: "Oswald", sans-serif;
+  /* padding-right: 150px; */
+  margin-left: 148px;
+}

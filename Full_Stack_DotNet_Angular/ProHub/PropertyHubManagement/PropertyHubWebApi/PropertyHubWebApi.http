@@ -1,0 +1,6 @@
+@PropertyHubWebApi_HostAddress = http://localhost:5057
+
+GET {{PropertyHubWebApi_HostAddress}}
+Accept: application/json
+
+###

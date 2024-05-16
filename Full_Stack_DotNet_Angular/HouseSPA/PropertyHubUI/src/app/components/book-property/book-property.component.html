@@ -1,0 +1,38 @@
+
+<div class="container">
+
+  <h2>Book Property</h2>
+
+  <form [formGroup]="bookPropertyForm" (ngSubmit)="onSubmit()">
+
+ 
+
+    <div class="mb-3">
+
+      <label for="status" class="form-label">Status:</label>
+
+      <select class="form-select" id="status" formControlName="status" required>
+
+        <option value=0>Confirmed</option>
+
+        <!-- <option value=1>Cancelled</option>
+
+        <option value=2>Pending</option> -->
+
+      </select>
+
+    </div>
+
+    <div class="mb-3">
+
+      <label for="bookingDate" class="form-label">Booking Date:</label>
+
+      <!-- <input type="datetime-local" class="form-control" id="bookingDate" formControlName="bookingDate" placeholder="" required> -->
+      <input type="datetime-local" class="form-control" id="bookingDate" formControlName="bookingDate" [min]="minBookingDate" required>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Book</button>
+
+  </form>
+
+</div>

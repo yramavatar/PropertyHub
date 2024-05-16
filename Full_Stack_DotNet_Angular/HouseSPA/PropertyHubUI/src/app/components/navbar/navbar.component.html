@@ -1,0 +1,51 @@
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark" id="navbar_id">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="assets\images\logo.png" alt="Logo" width="30" height="24" class="mr-5 d-inline-block align-text-top">
+            PropertyHub
+          </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/home" routerLinkActive="active"
+                        [routerLinkActiveOptions]="{exact: true}">Home</a>
+                </li>
+                <li class="nav-item" *ngIf="userType === 1">
+                    <a class="nav-link" routerLink="/my-properties" routerLinkActive="active">Add Property</a>
+                </li>
+                <li class="nav-item" *ngIf="userType === 0">
+                    <a class="nav-link" routerLink="/property-listings" routerLinkActive="active">Property Listings</a>
+                </li>
+                
+                <li class="nav-item" *ngIf="userType === 0">
+                    <a class="nav-link" routerLink="/my-bookings" routerLinkActive="active">My Bookings</a>
+                </li>
+            </ul>
+        </div>
+        
+            <ul class="navbar-nav mr-5"  *ngIf="!(userType === 1 || userType === 0)">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/login" routerLinkActive="active">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/register" routerLinkActive="active">Register</a>
+                </li>
+                
+            </ul>
+
+            <ul class="navbar-nav mr-5"  *ngIf="(userType === 1 || userType === 0)">
+                <!--New code  Ihav wrriten -->
+                <li class="nav-item">
+                    <span *ngIf="userFirstName" class="nav-link">Welcome,{{userFirstName }}</span>
+                </li>
+                <!--Till this -->
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/login" (click)="logout()" routerLinkActive="active">Logout</a>
+                </li>
+                
+            </ul>
+        </div>
+</nav>
